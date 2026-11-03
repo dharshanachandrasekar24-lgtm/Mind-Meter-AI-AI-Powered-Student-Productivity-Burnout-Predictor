@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Register - MindMeter AI{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center py-5">
+  <div class="col-md-6">
+    <div class="card p-4">
+      <h3 class="fw-bold mb-2">Create Student Account</h3>
+      <p class="text-muted small mb-4">Start managing workloads and avoiding burnout</p>
+
+      <form method="POST">
+        <div class="mb-3">
+          <label class="form-label small fw-semibold">Full Name</label>
+          <input type="text" name="full_name" class="form-control" required placeholder="Alex Rivera">
+        </div>
+        <div class="mb-3">
+          <label class="form-label small fw-semibold">University Email</label>
+          <input type="email" name="email" class="form-control" required placeholder="student@university.edu">
+        </div>
+        <div class="mb-3">
+          <label class="form-label small fw-semibold">College / University Name</label>
+          <input type="text" name="college_name" class="form-control" required placeholder="Stanford University">
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label class="form-label small fw-semibold">Department</label>
+            <input type="text" name="department" class="form-control" required placeholder="Computer Science">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label small fw-semibold">Year of Study</label>
+            <input type="text" name="year_of_study" class="form-control" required placeholder="3rd Year (Junior)">
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="form-label small fw-semibold">Password</label>
+          <input type="password" name="password" class="form-control" required placeholder="••••••••••••">
+        </div>
+        <button type="submit" class="btn btn-primary w-100 py-2">Complete Registration</button>
+      </form>
+
+      <div class="text-center mt-3 small">
+        Already registered? <a href="{{ url_for('auth.login') }}">Login here</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

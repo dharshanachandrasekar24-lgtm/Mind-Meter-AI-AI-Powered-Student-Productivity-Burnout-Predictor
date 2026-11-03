@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - MindMeter AI{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div>
+    <h2 class="fw-bold mb-1">Welcome back, {{ user.full_name }}</h2>
+    <p class="text-muted mb-0">{{ user.department }} · {{ user.college_name }}</p>
+  </div>
+  <div>
+    <a href="{{ url_for('tracker.index') }}" class="btn btn-primary btn-sm">+ Log Study Session</a>
+    <a href="{{ url_for('planner.view') }}" class="btn btn-outline-primary btn-sm ms-2">View Planner</a>
+  </div>
+</div>
+
+<div class="row g-3 mb-4">
+  <div class="col-md-3">
+    <div class="card p-3">
+      <span class="text-muted small">Today's Study</span>
+      <h3 class="fw-bold mb-0 mt-1">{{ today_hours }} hrs</h3>
+      <span class="text-muted small">Target: 5.0 hrs</span>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card p-3">
+      <span class="text-muted small">Pending Deadlines</span>
+      <h3 class="fw-bold mb-0 mt-1 text-warning">{{ pending_count }}</h3>
+      <span class="text-muted small">Active Assignments</span>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card p-3">
+      <span class="text-muted small">Burnout Risk Status</span>
+      <h3 class="fw-bold mb-0 mt-1 text-success">Low Risk</h3>
+      <span class="text-muted small">Score: 34 / 100</span>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card p-3">
+      <span class="text-muted small">Productivity Index</span>
+      <h3 class="fw-bold mb-0 mt-1 text-primary">80%</h3>
+      <span class="text-muted small">High Flow Pacing</span>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,6 @@
+{
+  "name": "MindMeter AI - Student Productivity & Burnout Predictor",
+  "description": "An AI-powered academic workload, habit tracking, and burnout risk estimation platform with personalized study timetables for college students.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

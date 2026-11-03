@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}MindMeter AI - Student Productivity & Burnout Predictor{% endblock %}
+
+{% block content %}
+<div class="row align-items-center py-5">
+  <div class="col-lg-7">
+    <span class="badge bg-light text-primary mb-3 px-3 py-2 border">Study Smarter. Stay Balanced. Achieve Better.</span>
+    <h1 class="display-4 fw-bold mb-3" style="color: #172554;">
+      Your Productivity.<br>
+      <span style="color: #7158E2;">Your Balance.</span><br>
+      Your Growth.
+    </h1>
+    <p class="lead text-muted mb-4">
+      An AI-powered academic workload and burnout risk estimation platform for college students. Track study sessions, predict cognitive strain with Scikit-learn Random Forests, and follow adaptive timetables.
+    </p>
+    <div>
+      <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg me-2">Get Started Free</a>
+      <a href="{{ url_for('auth.login') }}" class="btn btn-outline-secondary btn-lg">Explore Demo</a>
+    </div>
+  </div>
+  <div class="col-lg-5">
+    <div class="card p-4 shadow-sm border-0 bg-white">
+      <h5 class="fw-bold mb-3">Core Academic Features</h5>
+      <ul class="list-unstyled">
+        <li class="mb-3">✓ <strong>Daily Study Tracker</strong> - Log deep-work hours, sleep, and breaks.</li>
+        <li class="mb-3">✓ <strong>Scikit-learn Burnout Engine</strong> - 91.4% validated predictive accuracy.</li>
+        <li class="mb-3">✓ <strong>Adaptive Timetable Planner</strong> - Dynamically reschedules study blocks.</li>
+        <li class="mb-3">✓ <strong>Habit Streak Monitor</strong> - Builds 21-day cognitive discipline.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
